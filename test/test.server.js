@@ -118,8 +118,8 @@ tape( 'the function throws a type error if provided more than one argument and t
 
 tape( 'the function throws an error if an error is encountered while attempting to start a server', function test( t ) {
 	var httpServer = proxyquire( './../lib/server.js', {
-		'@stdlib/net/http-server': createServer,
-		'@stdlib/utils/open-url': noop
+		'@stdlib/net-http-server': createServer,
+		'@stdlib/utils-open-url': noop
 	});
 
 	t.throws( foo, Error, 'throws an error' );
@@ -140,8 +140,8 @@ tape( 'both the options and callback arguments are optional', function test( t )
 	var httpServer;
 
 	httpServer = proxyquire( './../lib/server.js', {
-		'@stdlib/net/http-server': createServer,
-		'@stdlib/utils/open-url': noop
+		'@stdlib/net-http-server': createServer,
+		'@stdlib/utils-open-url': noop
 	});
 
 	httpServer();
@@ -168,8 +168,8 @@ tape( 'the callback argument is optional (options)', function test( t ) {
 	var httpServer;
 
 	httpServer = proxyquire( './../lib/server.js', {
-		'@stdlib/net/http-server': createServer,
-		'@stdlib/utils/open-url': noop
+		'@stdlib/net-http-server': createServer,
+		'@stdlib/utils-open-url': noop
 	});
 
 	httpServer({
@@ -198,7 +198,7 @@ tape( 'the options argument is optional (callback)', function test( t ) {
 	var httpServer;
 
 	httpServer = proxyquire( './../lib/server.js', {
-		'@stdlib/utils/open-url': noop
+		'@stdlib/utils-open-url': noop
 	});
 
 	httpServer( onReady );
@@ -223,8 +223,8 @@ tape( 'if provided a `dir` option from which to serve files, the function resolv
 	var flg;
 
 	httpServer = proxyquire( './../lib/server.js', {
-		'@stdlib/net/http-server': createServer,
-		'@stdlib/utils/open-url': noop,
+		'@stdlib/net-http-server': createServer,
+		'@stdlib/utils-open-url': noop,
 		'./request_listener.js': requestListener
 	});
 
@@ -275,7 +275,7 @@ tape( 'if the `open` option is `true`, the function will attempt to open a user\
 	};
 
 	httpServer = proxyquire( './../lib/server.js', {
-		'@stdlib/utils/open-url': openURL
+		'@stdlib/utils-open-url': openURL
 	});
 
 	httpServer( opts, onReady );
