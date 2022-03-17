@@ -50,6 +50,7 @@
     "@stdlib/net-http-server": "^0.0.x",
     "@stdlib/process-cwd": "^0.0.x",
     "@stdlib/process-env": "^0.0.x",
+    "@stdlib/string-format": "^0.0.x",
     "@stdlib/utils-noop": "^0.0.x",
     "@stdlib/utils-open-url": "^0.0.x",
     "debug": "^2.6.9"
