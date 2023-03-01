@@ -139,10 +139,10 @@ function clbk( error, server ) {
 
 ## Installation
 
-To use the module as a general utility, install the module globally
+To use as a general utility, install the CLI package globally
 
 ```bash
-npm install -g @stdlib/net-simple-http-server
+npm install -g @stdlib/net-simple-http-server-cli
 ```
 
 </section>
@@ -281,6 +281,10 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [stdlib]: https://github.com/stdlib-js/stdlib
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
+
+[cli-section]: https://github.com/stdlib-js/net-simple-http-server#cli
+[cli-url]: https://github.com/stdlib-js/net-simple-http-server/tree/cli
+[@stdlib/net-simple-http-server]: https://github.com/stdlib-js/net-simple-http-server/tree/main
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/net-simple-http-server/main/LICENSE
 
