@@ -1,0 +1,13 @@
+"use strict";var s=function(r,e){return function(){return e||r((e={exports:{}}).exports,e),e.exports}};var q=s(function(ir,m){
+var P=require('@stdlib/assert-is-boolean/dist').isPrimitive,D=require('@stdlib/assert-is-string/dist').isPrimitive,N=require('@stdlib/assert-is-plain-object/dist'),p=require('@stdlib/assert-has-own-property/dist'),l=require('@stdlib/error-tools-fmtprodmsg/dist');function j(r,e){return N(e)?p(e,"dir")&&(r.dir=e.dir,!D(r.dir))?new TypeError(l('0kR2W',"dir",r.dir)):p(e,"open")&&(r.open=e.open,!P(r.open))?new TypeError(l('0kR2o',"open",r.open)):null:new TypeError(l('0kR2V',e));}m.exports=j
+});var b=s(function(nr,h){
+var o=require('@stdlib/assert-has-own-property/dist');function k(r){var e={};return o(r,"port")&&(e.port=r.port),o(r,"maxport")&&(e.maxport=r.maxport),o(r,"hostname")&&(e.hostname=r.hostname),o(r,"address")&&(e.address=r.address),e}h.exports=k
+});var O=s(function(ar,x){
+var H=require("debug"),V=require('@stdlib/buffer-from-string/dist'),B=H("simple-http-server:404"),w=V("File not found");function I(r,e){B("Sending 404 response..."),e.statusCode=404,e.setHeader("Content-Type","text/plain"),e.setHeader("Content-Length",w.length),e.end(w)}x.exports=I
+});var y=s(function(ur,S){
+var U=require("path").resolve,z=require("debug"),A=require('@stdlib/fs-read-dir/dist'),G=O(),f=z("simple-http-server:request-listener");function J(r){return e;function e(u,n){var i;f("Received a request for %s",u.url),i=u.url.substring(1),i=U(r.dir,i),i.substring(r.dir.length)===""&&(i=r.dir),f("Request resolved to path %s",i),f("Reading directory"),A(i,t);function t(a,g){if(a&&(a.code==="ENOENT"||a.code==="ENOTDIR"))return G(n)}}}S.exports=J
+});var C=s(function(sr,R){
+var K=require("path"),M=require("debug"),Q=require('@stdlib/process-cwd/dist'),W=require('@stdlib/net-http-server/dist'),E=require('@stdlib/assert-is-function/dist'),X=require('@stdlib/utils-open-url/dist'),Y=require('@stdlib/error-tools-fmtprodmsg/dist'),Z=require('@stdlib/utils-noop/dist'),T=q(),_=b(),$=y(),v=M("simple-http-server");function rr(){var r,e,u,n,i,t,a;if(t={},arguments.length===1)E(arguments[0])?n=arguments[0]:(r=arguments[0],a=T(t,r));else if(arguments.length>1){if(r=arguments[0],n=arguments[1],!E(n))throw new TypeError(Y('0kR2b',n));a=T(t,r)}if(a)throw a;n===void 0&&(n=Z),t.dir&&(t.dir=K.resolve(Q(),t.dir)),v("Serving directory: %s",t.dir),r?u=_(r):u={},i=W(u,$(t)),v("Starting server..."),i(g);function g(c,L){var d;if(c)throw c;v("Server started."),e=L,e.once("close",F),t.open&&(d=e.address(),X("http://"+d.address+":"+d.port)),n(null,e)}function F(){v("Server closed.")}}R.exports=rr
+});var er=C();module.exports=er;
+/** @license Apache-2.0 */
+//# sourceMappingURL=index.js.map
