@@ -47,7 +47,7 @@
     "@stdlib/cli-ctor": "^0.2.2",
     "@stdlib/fs-read-dir": "^0.2.2",
     "@stdlib/fs-read-file": "^0.2.2",
-    "@stdlib/net-http-server": "^0.2.1",
+    "@stdlib/net-http-server": "^0.2.2",
     "@stdlib/process-cwd": "^0.2.2",
     "@stdlib/process-env": "^0.2.2",
     "@stdlib/string-format": "^0.2.2",
