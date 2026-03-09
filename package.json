@@ -43,7 +43,7 @@
     "@stdlib/assert-is-function": "^0.2.3",
     "@stdlib/assert-is-plain-object": "^0.2.3",
     "@stdlib/assert-is-string": "^0.2.3",
-    "@stdlib/buffer-from-string": "^0.2.2",
+    "@stdlib/buffer-from-string": "^0.2.3",
     "@stdlib/cli-ctor": "^0.2.3",
     "@stdlib/fs-read-dir": "^0.2.3",
     "@stdlib/fs-read-file": "^0.2.3",
